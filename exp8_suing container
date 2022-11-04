@@ -1,0 +1,25 @@
+sudo su
+docker pull docker/whalesay
+ docker run docker/whalesay cowsay hello
+docker images
+sudo docker pull postgres
+docker ps
+docker ps -a
+docker pull ubuntu:latest
+docker images
+docker run -it ubuntu:latest bash
+apt update
+apt install apache2
+cd/var/www/html
+mv index.html index.backup
+ls
+apt install nano
+cat index.html
+<html>
+<title>first page</title>
+<body bgcolor="pink">my name is Saloni</body>
+</html>
+service apache2 start
+service apache2 status
+docker commit 67e9bd16d77b bushsk/ubuntu_1:v1
+docker images
