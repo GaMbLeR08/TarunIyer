@@ -1,8 +1,18 @@
-FROM ubuntu:latest
-MAINTAINER "Chirag"
-RUN apt update -y
-RUN apt install nginx -y
-EXPOSE 80
-COPY index.html /var/www/html/index.html
-CMD ["nginx", "-g", "daemon off;"]
+sudo su
+mkdir tarun
+cd tarun 
+nano index.html
+nano Dockerfile
+    FROM ubuntu:latest
+    MAINTAINER "Tarun"
+    RUN apt update -y
+    RUN apt install nginx -y
+    EXPOSE 80
+    COPY index.html /var/www/html/index.html
+    CMD ["nginx", "-g", "daemon off;"]
 
+docker build -t tarunservers .
+ufw allow 8686
+docker run -itd -p 8686:80 tarunservers
+
+//localhost:8686
